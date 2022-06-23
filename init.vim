@@ -18,6 +18,17 @@ set autoindent
 set incsearch
 set scrolloff=8
 set signcolumn=yes
+set nobackup
+set nowritebackup
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Alternate : and ; since you use : way more often (don't want to have to
 " press shift!)
@@ -28,8 +39,11 @@ call plug#begin('~/.vim/autoload')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
+
+let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-git', 'coc-css', 'coc-cssmodules', 'coc-eslint', 'coc-html', 'coc-json', 'coc-java', 'coc-markdownlint', 'coc-sh', 'coc-sql', 'coc-yaml']
 
 :colorscheme gruvbox
