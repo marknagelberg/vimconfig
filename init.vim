@@ -44,6 +44,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-git', 'coc-css', 'coc-cssmodules', 'coc-eslint', 'coc-html', 'coc-json', 'coc-java', 'coc-markdownlint', 'coc-sh', 'coc-sql', 'coc-yaml']
+let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-git', 'coc-css', 'coc-cssmodules', 'coc-eslint', 'coc-html', 'coc-json', 'coc-java', 'coc-markdownlint', 'coc-sh', 'coc-sql', 'coc-yaml', 'coc-prettier']
 
 :colorscheme gruvbox
